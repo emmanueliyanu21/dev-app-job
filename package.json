@@ -4,7 +4,7 @@
     "description": "a cms with node.js",
     "main": "index.js",
     "scripts": {
-        "test": "nodemon index"
+        "start": "node app.js"
     },
     "author": "",
     "license": "ISC",
