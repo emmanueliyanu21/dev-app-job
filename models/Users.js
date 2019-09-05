@@ -31,6 +31,7 @@ const UserSchema = new Schema({
 
 });
 
+// i dont understand this test method
 UserSchema.methods.testMethod = function() {
 
 };

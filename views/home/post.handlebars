@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - Start Bootstrap Template</title>
+    <title>Devs_Jobs</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,18 +30,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="/">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -54,46 +54,62 @@
       <div class="row">
 
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-8" style="max-width: 100%; margin: auto;">
 
           <!-- Title -->
-          <h1 class="mt-4">{{post.title}}</h1>
+          <div class="job-caption">
+              <h1 class="mt-4">{{post.title}}</h1>
+              <p>Posted on July 28, 2019</p>
+              <h2 class="lead">{{post.body}}</h2>
+              <h2 class="caption-body">We're looking for developer-entrepreneurs and technical business owners to join the Growth team at Paystack as Technical Product Specialists. Developers are one of the most important groups in Paystack's community of partners, and as the Technical Product Specialist, you'll own our developer relations and give Paystack developers the superpowers they need to build amazing products.</h2>
+              <div class="caption-apply">
+                  <button class="btn btn-apply">Apply</button>
+              </div>
+              <h2 class="caption-status">Status: Ongoing</h2>
+          </div>
 
-          <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Start Bootstrap</a>
-          </p>
+          <div class="job-stack">
+              <h2 class="stack">Tech Stacks</h2>
+              <p>JavaScript, ES6, ReactJS, Node.js, HTML, CSS, Git,</p>
+          </div>
 
-          <hr>
+          <div class="job-stack">
+              <h2 class="stack">Responsibility</h2>
 
-          <!-- Date/Time -->
-          <p>Posted on January 1, 2017 at 12:00 PM</p>
+              <p>Defines, documents, and communicates development standards, best practices, code review processes, and build tools</p>
+              <p>Work with Design, UX, and Product Manager to ensure optimal and consistent user experience.</p>
 
-          <hr>
+              <p>Work with development peers to ensure the overall performance of technology stack</p>
 
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+              <p>Defines and sets a project’s roadmap to include planning for integration of new technology, ownership of code libraries, and the backlog of technical tasks</p>
 
-          <hr>
+              <p>Serves as an ambassador for development and a champion of quality standards while spreading a passion for current technology and new trends</p>
 
-          <!-- Post Content -->
-          <p class="lead">{{post.body}}</p>
+              <p>Leadership responsibilities to include ensuring adherence to standards, code reviews, mentorship of the development team, issue/conflict resolution, and one on ones with team members reporting to the lead</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+              <p>Participates as an active team member of daily standups and other agile-focused efforts, including joining sprint planning meetings and estimating work effort on tasks assigned to the entire team</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in
-              <cite title="Source Title">Source Title</cite>
-            </footer>
-          </blockquote>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+              <p>Accountable for delivering work that exceeds internal and client standards on a consistent basis as well as for the work produced by your team </p>
+          </div>
+          <div class="job-stack">
+            <h2 class="stack">Skills/Qualifications:</h2>
+              <ul class="ul-details">
+                <li>Bachelor’s degree in Computer Science or a vast technological understanding.</li>
+                <li>3+ years of full-stack web development experience.</li>
+                <li>Experience developing with web development technologies such as HTML5, CSS3, JavaScript, AJAX, JSON, etc.</li>
+                <li>Proven experience implementing adaptive/responsive designs</li>
+                <li>A thorough understanding of HTTP, cookies, caching, and optimization techniques</li>
+                <li>Expert knowledge of cross-browser compatibility, including tablet and phone form-factors</li>
+                <li>Competency working/deploying projects with a source control tool; GIT preferred</li>
+                <li>Ability to take a project from scoping requirements through actual project launch</li>
+                <li>Linux, git, Javascript, Bash, Google Cloud Platform, Docker, MySQL Administration, Apache, C++, Javascript, HTML, CSS, PHP</li>
+                <li>Node.js</li>
+                <li>ES6</li>
+                <li>React.js</li>
+                <li>Javascript testing suites</li>
+                <li>RDBMS</li>
+              </ul>
+          </div>
 
           <hr>
 
@@ -112,16 +128,9 @@
           </div>
 
           <!-- Single Comment -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </div>
-
+          
           <!-- Comment with nested comments -->
-          <div class="media mb-4">
+          {{!-- <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
             <div class="media-body">
               <h5 class="mt-0">Commenter Name</h5>
@@ -144,12 +153,12 @@
               </div>
 
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
         <!-- Sidebar Widgets Column -->
-        {{> home/sidebar}}
+        {{!-- {{> home/sidebar}} --}}
 
       </div>
       <!-- /.row -->

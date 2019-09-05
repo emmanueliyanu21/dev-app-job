@@ -13,6 +13,16 @@ const PostSchema = new Schema({
         required: true
     },
 
+    amount: {
+        type: String,
+        required: true
+    },
+
+    location: {
+        type: String,
+        required: true,
+    },
+
     status: {
         type: String,
         default: 'public'
@@ -42,6 +52,6 @@ const PostSchema = new Schema({
         req: 'comments'
     }],
 
-}, { usePushEach: true });
+}, { usePushEach: true });  // i don't understand this part
 
 module.exports = mongoose.model('posts', PostSchema);

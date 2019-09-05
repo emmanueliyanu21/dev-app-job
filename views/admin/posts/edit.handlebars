@@ -8,13 +8,49 @@
     </div>
 
     <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Status</label>
         <select name="status" id="status" class="form-control">
-    {{#select post.status}}
+        {{#select post.status}}
             <option value="public">Public</option>
             <option value="private">Private</option>
             <option value="draft">Draft</option>
-    {{/select}}
+        {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Category</label>
+        <select name="category" id="category" class="form-control">
+            {{#select post.category}}
+                {{#each categories}}
+                    <option value="{{id}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Amount</label>
+        <select name="amount" id="amount" class="form-control">
+            {{#select post.amount}}
+            <option value="&#8358;100,000 - &#8358;150,000">&#8358;100,000 - &#8358;150,000</option>
+            <option value="&#8358;150,000 - &#8358;200,000">&#8358;150,000 - &#8358;200,000</option>
+            <option value="&#8358;200,000 - &#8358;250,000">&#8358;200,000 - &#8358;250,000</option>
+            <option value="&#8358;250,000 - &#8358;350,000">&#8358;250,000 - &#8358;350,000</option>
+            <option value="&#8358;350,000 - &#8358;700,000">&#8358;350,000 - &#8358;700,000</option>
+            {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Location</label>
+        <select name="location" id="location" class="form-control">
+            {{#select post.location}}
+            <option value="Lagos, Nigeria">Lagos, Nigeria</option>
+            <option value="Ibadan, Nigeria">Ibadan, Nigeria</option>
+            <option value="Port Harcourt, Nigeria">Port Harcourt, Nigeria</option>
+            <option value="Abuja, Nigeria">Abuja, Nigeria</option>
+            {{/select}}
         </select>
     </div>
     

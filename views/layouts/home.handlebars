@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Home - Start Bootstrap Template</title>
+    <title>DEV_JOBS - Developers Jobs Platoform</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,9 @@
     <!-- Custom styles for this template -->
     <link href="/css/blog-post.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
 
   <body>
@@ -27,15 +30,14 @@
     {{> home/home-nav}}
 
     <!-- Page Content -->
-    <div class="container">
-
+  
       {{#if errors}}
       
         {{#each errors}}
 
         <div class="alert alert-danger">
           {{message}}
-          </div>
+        </div>
 
         {{/each}}
 
@@ -46,9 +48,6 @@
       {{{body}}}
       <!-- /.row -->
 
-    </div>
-    <!-- /.container -->
-
     <!-- Footer -->
    
    {{> home/footer-nav}}
@@ -56,6 +55,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
 
   </body>
 

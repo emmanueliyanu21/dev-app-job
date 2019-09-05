@@ -20,25 +20,132 @@ router.get('/', (req, res) => {
     });
 });
 
+//to set limit to the number of displayed data
+function lookatEntireResponse(res) {
+    function lookAtItemInResponse(item) {
+        if(item == 1) {
+            sq3.query("SELECT * from students;",
+                function(err, res) {
+                    if (err){
+                       throw err;
+                    } else {
+                        if(res.length==1){
+                            doSomething(item);
+                            lookAtItemInResponse(res.shift());
+                        } else {
+                           //just don't call the next lookAtItemInResponse function, effectively same thing as "break;"
+                        }
+                    }
+                });
+            sq3.end();
+        } else {
+            lookAtItemInResponse(res.shift());
+        }
+    }
+    lookAtItemInResponse(res.shift());
+}
+
+//to search for jobs
+//Any conditions that apply to not populated user collection documents
+// var userQuery = {};
+// userModel.find(userQuery)
+// 	//Populate only if the condition is fulfilled
+// 	.populate('useraddress', null, {"useraddress.repeat": { $gte: _repeatTime}})
+// 	.exec(function (err, results) {
+// 		results = results.filter(function(doc){
+// 			//If not populated it will be null, so we filter them out
+// 			return !!doc.useraddress;
+// 		});
+
+// 		//Do needed stuff here.
+// 	});
+
+router.get('/jobs', (req, res) => {
+    Posts.find({}).then(posts => {
+        Category.find({}).then(categories => {
+            res.render('home/jobs', { posts: posts, categories: categories });
+        });
+    });
+});
+
+router.get('/frontend', (req, res) => {
+    Posts.find({}).then(posts => {
+        Category.find({}).then(categories => {
+            res.render('home/frontend', { posts: posts, categories: categories });
+        });
+    });
+});
+
+router.get('/contact', (req, res) => {
+    res.render('home/contact');
+});
+
 router.get('/about', (req, res) => {
     res.render('home/about');
+});
+
+router.get('/services', (req, res) => {
+    res.render('home/services');
+});
+
+router.get('/jobs', (req, res) => {
+    res.render('home/jobs');
+});
+
+router.get('/frontend', (req, res) => {
+    res.render('home/frontend');
+});
+
+router.get('/backend', (req, res) => {
+    res.render('home/backend');
+});
+
+router.get('/fullstack', (req, res) => {
+    res.render('home/fullstack');
+});
+
+router.get('/devops', (req, res) => {
+    res.render('home/devops');
+});
+
+router.get('/designer', (req, res) => {
+    res.render('home/designer');
+});
+
+router.get('/projectmanager', (req, res) => {
+    res.render('home/projectmanager');
+});
+
+router.get('/digital-marketer', (req, res) => {
+    res.render('home/digital-marketer');
+});
+
+router.get('/content', (req, res) => {
+    res.render('home/content');
 });
 
 router.get('/login', (req, res) => {
     res.render('home/login');
 });
 
+router.post('/login', (req, res) => {
+    res.render('admin');
+});
+
 //APP login
 
-passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
 
+passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+    
     User.findOne({ email: email }).then(user => {
         if (!user) return done(null, false, { message: 'No user found' });
         bcrypt.compare(password, user.password, (err, matched) => {
-            if (err) return err;
+            if (err) return err;   
             if (matched) {
-                return done(null, user);
-            } else {
+                return done(null, users);
+                // console.log('it works on login');
+            }    
+            else {
                 return done(null, false, { message: 'Incorrect password.' });
             }
         });
@@ -81,7 +188,6 @@ router.get('/post/:id', (req, res) => {
             Category.find({}).then(categories => {
                 res.render('home/post', { post: post, categories: categories });
             });
-
         });
 });
 
@@ -137,5 +243,8 @@ router.post('/register', (req, res) => {
         });
     }
 });
+
+
+
 
 module.exports = router;
