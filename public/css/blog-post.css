@@ -13,8 +13,13 @@ body {
 /* nav bar styling here */
 
 .ul-nav li {
-    margin-right: 15px;
+    margin-right: 20px;
     padding-bottom: 0px!important;
+}
+
+.ul-nav li a {
+    font-family: Roboto, sans-serif!important;
+    font-size: 14px!important;
 }
 
 .navbar {
