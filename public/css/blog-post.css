@@ -37,6 +37,59 @@ body {
 
 /* navbar styling ends here */
 
+.white-bk .image-1 {
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    opacity: 1.0!important;
+}
+
+.white-bk {
+    /* background-color: #f8fafb;
+    opacity: 0.4; */
+    position: absolute;
+    top: -120px;
+    border-radius: 2px;
+    margin: auto;
+}
+
+.image-1 p {
+    font-size: 10px;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    padding-bottom: 0px!important;
+    padding-top: 0px!important;
+    color: #fff;
+}
+
+.white-bk a {
+    text-decoration: none!important;
+}
+
+.show-white:hover {
+    background-color: rgb(22, 22, 22);
+    color: #000!important;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.white-bk .image-2 {
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center
+}
+
+.white-bk img {
+    max-width: 40%;
+}
+
+.white-bk img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .job-caption {
     background-color: #fff;
     border-radius: 4px;
