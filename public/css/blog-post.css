@@ -73,10 +73,33 @@ body {
 }
 
 .show-white:hover {
-    background-color: rgb(22, 22, 22);
     color: #000!important;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.sw-brwonie:hover {
+    background-color: rgb(255, 200, 138);
+}
+
+.sw-blue:hover {
+    background-color: rgb(190, 242, 255);
+}
+
+.sw-green:hover {
+    background-color: rgb(164, 219, 169)
+}
+
+.sw-red:hover {
+    background-color: rgb(255, 196, 196);
+}
+
+.sw-dust:hover {
+    background-color: rgb(255, 223, 154);
+}
+
+.sw-brwon:hover {
+    background-color: rgb(255, 193, 152);
 }
 
 .white-bk .image-2 {
@@ -440,7 +463,6 @@ body {
 .text-header {
     border-bottom: 1px solid rgb(230, 230, 230);
     padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 .text-header h2 button {
@@ -911,3 +933,34 @@ body {
 
 
 /* contact us ends here */
+
+
+/* accordion styling */
+
+.accordion button {
+    outline: none!important;
+    text-decoration: none!important;
+}
+
+.text-main {
+    text-align: center;
+}
+
+.text-main h2 {
+    color: red;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.space-faq {
+    padding-bottom: 80px;
+}
+
+.text-main p {
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
