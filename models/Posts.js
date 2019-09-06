@@ -38,6 +38,16 @@ const PostSchema = new Schema({
         require: true
     },
 
+    stack: {
+        type: String,
+        require: true
+    },
+
+    experience: {
+        type: String,
+        require: true
+    },
+
     file: {
         type: String,
     },

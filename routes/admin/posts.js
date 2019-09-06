@@ -81,7 +81,10 @@ router.post('/create', (req, res) => {
             location: req.body.location,
             status: req.body.status,
             category: req.body.category,
+            stack: req.body.stack,
+            experience: req.body.experience,
             body: req.body.body
+            
         });
 
         newPost.save().then(savedPost => {
@@ -115,6 +118,8 @@ router.put('/edit/:id', (req, res) => {
             post.status = req.body.status;
             post.allowComments = allowComments;
             post.category = req.body.category;
+            post.stack = req.body.stack;
+            post.experience = req.body.experience;
             post.body = req.body.body;
             post.save().then(updatedPost => {
                 res.redirect('/admin/posts');

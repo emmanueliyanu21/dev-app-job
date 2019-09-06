@@ -60,6 +60,27 @@
         <input name="allowComments" type="checkbox" {{#if post.allowComments}} checked="checked" {{/if}}class="form-control-input" id="allowComments">
     </div>
 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="title">Stack</label>
+                <input name="stack" type="text" class="form-control" id="stack" value="{{post.stack}}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="title">Experience</label>
+                <select name="experience" id="experience" class="form-control">
+                    {{#select post.experience}}
+                        <option value="Senior">Senior</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Draft">Junior</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="body">Body</label>
         <textarea name="body" cols="30" rows="10" class="form-control" id="body" >{{post.body}}</textarea>
