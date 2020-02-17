@@ -84,7 +84,6 @@ router.post('/create', (req, res) => {
             stack: req.body.stack,
             experience: req.body.experience,
             body: req.body.body
-            
         });
 
         newPost.save().then(savedPost => {

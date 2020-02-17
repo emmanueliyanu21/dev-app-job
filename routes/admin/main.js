@@ -14,13 +14,9 @@ router.all('/*', (req, res, next) => {
     next();
 });
 
-
 router.get('/', (req, res) => {
     res.render('admin/index');
 });
-
-
-
 
 // router.get('/dashboard', (req, res) => {
 //     res.render('admin/dashboard');
@@ -39,6 +35,5 @@ router.post('/generate-fake-posts', (req, res) => {
         })
     }
 });
-
 
 module.exports = router;
